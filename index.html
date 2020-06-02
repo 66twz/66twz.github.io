@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-First-one" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/02/First-one/" class="article-date">
+  <time datetime="2020-06-02T05:37:09.000Z" itemprop="datePublished">2020-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/02/First-one/">First one</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<p>《离散数学》[1]进入了集合论的学习。我们使用的教材主要是面向工科，对集合的定义还停留在粗浅的阶段。作为数学系的学生，老师带领我们去体会更严谨更深刻的集合定义，故开篇使用教材《数学基础》[2]。<br>下面梳理一下今天课程学到的知识，大部分整理自老师PPT和课堂教学内容。<br>#引入<br>什么是集合？</p>
+<blockquote>
+<p><strong>Cantor (1895)</strong> A set is a collection of certain distinct objects of our<br>intuition or of our thought into a whole.</p>
+</blockquote>
+<blockquote>
+<p><strong>理发师悖论</strong><br>小城里的理发师放出豪言：他只为，而且一定要为城里所有不为自己刮胡子的人刮胡子。<br>那么，理发师应该为自己刮胡子吗?</p>
+</blockquote>
+<blockquote>
+<p><strong>罗素悖论</strong><br>考虑“由所有集组成的集$S$”. 那么是否有$S ∈ S$?<br>设$b =$ { $ 集a | a\notin a$}.<br>现问: 是$b \in b$, 还是$b\notin b$?</p>
+</blockquote>
+<p>这里出现一个悖论，故后人修正，提出了ZFC公理系统。</p>
+<h1 id="ZF语言"><a href="#ZF语言" class="headerlink" title="ZF语言"></a>ZF语言</h1><h2 id="相关公理"><a href="#相关公理" class="headerlink" title="相关公理"></a>相关公理</h2><h3 id="ZF0"><a href="#ZF0" class="headerlink" title="ZF0"></a>ZF0</h3><p>(集存在公理) </p>
+<blockquote>
+<p>$∃x(x = x)$</p>
+</blockquote>
+<p>意思是：存在一个集合x/集合是存在的。<br>这条公埋是为了保证集论论域非空，才能让后面的内容有意义。</p>
+<p>Q：为什么要出现 $(x = x)$？<br>A：$(x = x)$是一个永真式，当我们用存在语言，需要给一个式子描述，用一个永真式，那么就一定是存在的（老师原话大意）。<br>我们需要知道大概在干什么就好，不用想的特别特别清楚，如果想不清楚，你最好不要想太多，中间状态很危险。</p>
+<p>以下的内容，都需要给定集合，任意给定。</p>
+<h3 id="ZF1"><a href="#ZF1" class="headerlink" title="ZF1"></a>ZF1</h3><p> (外延公理 the axiom of extensionality) </p>
+<blockquote>
+<p>$∀x(x ∈ a ↔ x ∈ b) → a = b.$</p>
+</blockquote>
+<h3 id="ZF2"><a href="#ZF2" class="headerlink" title="ZF2"></a>ZF2</h3><p>(内涵公理 the axiom scheme of comprehension)</p>
+<blockquote>
+<p>设$s$为已知集, 则<br>$∃y∀x(x ∈ y ↔ x ∈ s ∧ p(x)),$<br>其中$p(x)$是任一公式, $y$不在其中出现.</p>
+</blockquote>
+<blockquote>
+<h4 id="命题1"><a href="#命题1" class="headerlink" title="命题1"></a>命题1</h4><p>内涵公理涉及的$y$是唯一的, 记作<br>$y = {x | x ∈ s ∧ p(x)}或y = {x ∈ s | p(x)}.$</p>
+</blockquote>
+<p>证明:<br>利用ZF1即可。假设$\exists y_1,y_2$，可推出它们相等。</p>
+<p>ZF2可以避免罗素悖论。</p>
+<blockquote>
+<h4 id="命题2"><a href="#命题2" class="headerlink" title="命题2"></a>命题2</h4><p>存在唯一的集合$∅$, 称为空集, 使得对任意集合$a$, 均有$∅ ⊆ a.$</p>
+</blockquote>
+<p>证明：<br>存在性证明：<br>$∀s, ∃!∅s = ${$x ∈ s | x \not= x$}                $\qquad(1)$<br>$∀a, b, ∅_a = ∅_b$                               $\qquad(2)$<br>故可$∅ = ∅_a$与集$a$的选取无关.<br>从而由定义知, $∀a, ∃∅ = ∅_a ⊆ a.$     $\qquad(3)$<br>唯一性证明：<br>假设 $∃∅’$满足该性质，<br>则有$∅’⊆∅$和$∅⊆∅’$，<br>故$∅=∅’.$</p>
+<p>提示：</p>
+<ul>
+<li>$(1)$ $(3)$由内涵公理得出：<br>给定一个公式(有点像描述性的语言)$p(x)=x \not= x$，一定存在相应的一个集合满足这个性质。<br>由$s$界定这个集合，这个集合为$s$的子集。</li>
+<li>$(2)$由外延公理得出：<br>外延公理中的$∀x(x ∈ a ↔ x ∈ b) → a = b.$<br>由于$x ∈ a$和$x ∈ b$是永假式，故$x ∈ a ↔ x ∈ b$是永真式，得到$a = b.$</li>
+</ul>
+<p>此时我们涉及到的第一个集合存在而唯一的集合，是空集，记为$∅.$</p>
+<p>之后，我们可以从空集出发，继续找到其他的集合，有限集、自然数集……从小到大。</p>
+<h3 id="ZF3"><a href="#ZF3" class="headerlink" title="ZF3"></a>ZF3</h3><p>(无序对公理the axiom of pairing )</p>
+<blockquote>
+<p>$∀a∀b, ∃y(︀∀x(x ∈ y ↔ (x ∈ a) ∨ (x ∈ b)))︀$</p>
+</blockquote>
+<p>把$y$记做$y={a,b}$，该公理说明，$y={a,b}$是一个集合。</p>
+<h3 id="ZF4"><a href="#ZF4" class="headerlink" title="ZF4"></a>ZF4</h3><p>(并集公理the axiom of union)</p>
+<blockquote>
+<p>$∀a, ∃y(︀∀x(x ∈ y ↔ ∃t ∈ a(x ∈ t)))︀$</p>
+</blockquote>
+<p>该公理说明：${x|∃t ∈ a(x ∈ t)}$是一个集合，记做$∪a$。</p>
+<p>其实ZF4中的并集和我们平时所理解的：“A∪B”是一个意思。</p>
+<p>$\forall A、B  \stackrel { ZF3 } { \Rightarrow } {a,b}$</p>
+<p>​           $\stackrel { ZF4 } { \Rightarrow }∪ {a,b}$</p>
+<p>y唯一. </p>
+<p>由ZF3: y = {a, b}. </p>
+<p>ZF4: y = ∪a. ∪{a, b} =: a ∪ b.</p>
+<h1 id="与其他课程的联想"><a href="#与其他课程的联想" class="headerlink" title="与其他课程的联想"></a>与其他课程的联想</h1><p>还记得在学习高代的时候，粗略地学习了，如何比较无穷集的大小，也用到了相同的方法。假设两个无穷集合相等，则存在从一个集合到另一个集合的一一对应。<br>当时我们比较的是集合$A$和它的子集构成的集合记为$B$，最后也是利用相似的双射构造，得到悖论，得到$|A|&lt;|B|$。</p>
+<p>参考资料：<br>[1]左孝凌等编著.离散数学[M].上海：上海科学技术文献出版社.1982.<br>[2]汪芳庭编著.数学基础[M].北京：科学出版社.2001.</p>
+<p>写在最后：<br>今天上课的时候脑壳痛，云里雾里的，还好课后能吸收消化掉这些知识。以前没接触过相关内容，看来还是要慢慢来啊。<br>笔记写得不好，如有问题，请各位批评指正。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/02/First-one/" data-id="ckaxhqn4m00005wnucf239ujc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/02/hello-world/" class="article-date">
+  <time datetime="2020-06-02T05:29:38.925Z" itemprop="datePublished">2020-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/02/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/02/hello-world/" data-id="ckaxhhcva00003onua2duepiu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/02/First-one/">First one</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/02/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
